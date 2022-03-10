@@ -144,6 +144,8 @@ public class GenerateAccueil {
         cssWriter.write("\n");
         cssWriter.write("display: flex;");
         cssWriter.write("\n");
+        cssWriter.write("margin-top: 0;");
+        cssWriter.write("\n");
         cssWriter.write("}");
         cssWriter.write("\n");
         cssWriter.write("li {");
@@ -190,7 +192,7 @@ public class GenerateAccueil {
         cssWriter.write("\n");
         cssWriter.write(".checkbox {");
         cssWriter.write("\n");
-        cssWriter.write("background-color: #379EC1;");
+        cssWriter.write("color: #379EC1;");
         cssWriter.write("\n");
         cssWriter.write("}");
 

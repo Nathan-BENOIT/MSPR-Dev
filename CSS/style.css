@@ -27,6 +27,7 @@ top: 0;
 left: 0;
 width: 100%;
 display: flex;
+margin-top: 0;
 }
 li {
 display: flex;
@@ -50,5 +51,5 @@ font-size: 25px;
 margin: 0;
 }
 .checkbox {
-background-color: #379EC1;
+color: #379EC1;
 }

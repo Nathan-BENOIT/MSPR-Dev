@@ -1,8 +1,8 @@
 //import java.io.*;
 package Parsing;
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 public class Parsing
@@ -16,9 +16,9 @@ public class Parsing
     public static ArrayList<String> listEmployes = new ArrayList<String>();
 
     public static ArrayList<String> StaffParsing() throws Exception {
-        URL url = new URL("https://raw.githubusercontent.com/Nathan-BENOIT/MSPR/main/staff.txt");
-        BufferedReader read = new BufferedReader(
-            new InputStreamReader(url.openStream()));
+        File file = new File("txt/staff.txt");
+        FileReader staff = new FileReader(file);  
+        BufferedReader read = new BufferedReader(staff);
 
         String line;
         listEmployes.clear();
@@ -33,10 +33,10 @@ public class Parsing
     public static ArrayList<String> stuffCode = new ArrayList<>();
 
     public static void listeParsing() throws Exception {
-        URL url = new URL("https://raw.githubusercontent.com/Nathan-BENOIT/MSPR/main/liste.txt");
+        File file = new File("txt/liste.txt");
+        FileReader stuff = new FileReader(file);
 
-        BufferedReader read = new BufferedReader(
-            new InputStreamReader(url.openStream()));
+        BufferedReader read = new BufferedReader(stuff);
 
         String line;
         stuffLabel.clear();
@@ -63,12 +63,12 @@ public class Parsing
     }
 
     public static ArrayList<String> personalParsing(String nom) throws Exception {
+
         ArrayList<String> listAgent = new ArrayList<String>();
-        //String info;
-        URL url = new URL("https://raw.githubusercontent.com/Nathan-BENOIT/MSPR/main/staff/" + nom  + "/" + nom + ".txt");
-        BufferedReader read = new BufferedReader(
-            new InputStreamReader(url.openStream())
-        );
+
+        File file = new File("txt/" + nom  + "/" + nom + ".txt");
+        FileReader agent = new FileReader(file);
+        BufferedReader read = new BufferedReader(agent);
 
         /*try (Scanner obj = new Scanner(read)) {
             info = obj.nextLine() + "\n";
